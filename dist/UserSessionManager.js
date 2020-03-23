@@ -168,6 +168,7 @@ var UserSessionManager = function () {
         var user = _this2.findUser(userUid);
 
         user.sessionMap["delete"](sessionUid);
+        console.log('Someone Logout', user.sessionMap.size, userUid);
 
         if (user.sessionMap.size === 0) {
           _this2.removeUser(userUid);

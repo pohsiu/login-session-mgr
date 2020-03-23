@@ -25,10 +25,10 @@ export default class UserSessionManager<SessionUid = DefaultSessionUid, SessionI
         onSessionLoggedIn?: OnLoggedInFunction<SessionInfo>;
         onSessionDuplicateLogin?: OnDuplicateLoginFunction<SessionInfo>;
         onSessionUnexpectedLoggedOut?: OnUnexpectedLoggedOutFunction<SessionInfo>;
-        onSessionReloggedIn: OnReloggedInFunction<SessionInfo>;
-        onSessionLoggedOut: OnLoggedOutFunction<SessionInfo>;
-        onUserLoggedIn: OnUserLoggedInFunction<UserInfo>;
-        onUserLoggedOut: OnUserLoggedOutFunction<UserInfo>;
+        onSessionReloggedIn?: OnReloggedInFunction<SessionInfo>;
+        onSessionLoggedOut?: OnLoggedOutFunction<SessionInfo>;
+        onUserLoggedIn?: OnUserLoggedInFunction<UserInfo>;
+        onUserLoggedOut?: OnUserLoggedOutFunction<UserInfo>;
     });
     addUser(userUid: UserUid, user: UserInfo): UserInfo;
     removeUser(userUid: UserUid): void;

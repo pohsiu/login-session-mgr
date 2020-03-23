@@ -19,8 +19,8 @@ export default class SessionManager<SessionUid = DefaultSessionUid, SessionInfo 
         onLoggedIn?: OnLoggedInFunction<SessionInfo>;
         onDuplicateLogin?: OnDuplicateLoginFunction<SessionInfo>;
         onUnexpectedLoggedOut?: OnUnexpectedLoggedOutFunction<SessionInfo>;
-        onReloggedIn: OnReloggedInFunction<SessionInfo>;
-        onLoggedOut: OnLoggedOutFunction<SessionInfo>;
+        onReloggedIn?: OnReloggedInFunction<SessionInfo>;
+        onLoggedOut?: OnLoggedOutFunction<SessionInfo>;
     });
     readonly activeSessions: Map<SessionUid, SessionInfo>;
     readonly inactiveSessions: Map<SessionUid, SessionInfo>;
