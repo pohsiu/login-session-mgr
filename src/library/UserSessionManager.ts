@@ -183,6 +183,7 @@ export default class UserSessionManager<
       const userUid = existedSession.user.uid;
       const user = <UserInfo>this.findUser(userUid);
       user.sessionMap.delete(sessionUid);
+      console.log('Someone Logout', user.sessionMap.size, userUid);
       if (user.sessionMap.size === 0) {
         this.removeUser(userUid);
         this.onUserLoggedOut(user, reason);
